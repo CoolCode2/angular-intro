@@ -1,8 +1,8 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-<!--9:00 10 minutes -->
+<!--1:30 10 minutes -->
 
-<!--Hook: Raise your hand if you're ready to get back to Javascript.  So today, we're going to dive back into Javascript in a big way.  The goal is two-fold, we want to save you time by intoducing a framework that makes dynamic HTML much easier.  The second part of the goal is to introduce you to the concept that there are tons of these frameworks, and they can all make your lives easier. -->
+<!--Hook: Raise your hand if you're ready to get back to the front end.  So today, we're going to dive back into the front end in a big way.  The goal is two-fold, we want to save you time by intoducing a framework that makes dynamic HTML much easier.  The second part of the goal is to introduce you to the concept that there are tons of these frameworks, and they can all make your lives easier. -->
 
 # Angular
 
@@ -32,9 +32,7 @@ Angular extends HTML with its declarative syntax to create dynamic, client-side 
 
 **AngularJS** is a Javascript-based, open-source, front-end framework maintained by Google and a community of individuals and corporations.  It was first released in 2010, and is currently going through a major transition from Angular 1.x to Angular 2.x.
 
-##Prereading Highlights
-
-<!-- Poll class - big takeaways from weekend's HW and basics on Angular.  Things they liked?  Didn't like? -->
+## Weekend Reading Highlights
 
 [Angular Guide Introduction](https://docs.angularjs.org/guide/introduction)
 
@@ -56,19 +54,18 @@ Angular extends HTML with its declarative syntax to create dynamic, client-side 
 
 * The features offered in Angular 2 are not radically different and community adoption is still in progress.
 * (As of the writing of this) Angular 1.x is well supported/active on Github.
-* (As of the writing of this) [Angular 2 is in testing & development](https://splintercode.github.io/is-angular-2-ready/), labeled as a "Release Candidate"
-![software-dev-cycle](https://upload.wikimedia.org/wikipedia/commons/0/07/Software_dev2.svg)
-* Angular 2 is best to use with [TypeScript](https://www.typescriptlang.org/), making it a recommended prerequisite.
+* [Angular 2 was just released](https://splintercode.github.io/is-angular-2-ready/)
+* Angular 2 is best to use with [TypeScript](https://www.typescriptlang.org/), and we haven't taught TypeScript yet.
 * Overall, it is much more important to **appreciate the problems** that we are solving on the client-side rather than memorizing specific solutions.
 
 >Other frameworks tackle the same problems (i.e. maintaining state) in different, interesting ways. There is still no "silver-bullet" client-side web framework, but rather a plethora of options each offering a unique perspective and toolset. Some of these technologies include: Ember, React, Redux, Elm, Riot, Backbone, Polymer, etc. [TodoMVC](http://todomvc.com/) is a site that presents examples of a simple "Todo" app written in a number of these technologies helping to compare and contrast them.
 
-<!--"Front-end development is a dumpster fire" -Adventures in Angular-->
+>"Front-end development is a dumpster fire" -Adventures in Angular
 
-<!--9:10 10 minutes -->
+<!--1:45 15 minutes -->
 <!-- Half-mast then catchup -->
 
-##Bower
+## Bower
 
 [Bower](http://bower.io/) is a **package manager for *front-end* dependencies**. Install or update it with:
 
@@ -78,9 +75,11 @@ npm install -g bower
 
 Just like npm, Bower is a handy way to install files locally, but also gives us a convenient way to share our project code with other developers without needing to send along tons of third-party libraries using a `bower.json` file.
 
-##HTML Setup
+<!--What does `bower.json` remind you of?-->
 
->Disclaimer: For the moment we will focus on writing Angular that is simply works in an understandable way. At the end of this document find a link to a style-guide that will suggest certain ways to refactor our code.
+## HTML Setup
+
+>Disclaimer: For the moment we will focus on writing Angular that simply works in an understandable way. At the end of this document, you will find a link to a style-guide that will suggest certain ways to refactor our code.
 
 Create a new directory `ngFun`, inside initialize bower with `bower init` and hit enter a bunch of times to have it generate a `bower.json` file.
 
@@ -104,28 +103,27 @@ Now update your `body` element to `<body ng-app="ngFun">`.
 
 Great, we're up and running!
 
-<!--Briefly walk through files in directory -->
+<!--2:00 10 minutes -->
 
-<!-- Catch-phrase with Model, View, Controller -->
-
-<!--9:20 10 minutes -->
-
-##Templates & Expressions
+## Templates & Expressions
 
 Angular creates its views by templating directly into HTML with expressions. This is its declarative way of building the UI.
 
 Let's write a regular javascript expression inside double curly brackets, such as: `{{ __someExpression__ }}` and see what your HTML evaluates to, for example: `{{ 4 * 4 }} `.
 
-<!--Break and explain the rest of the changes will either be in app.js OR in index.html -->
+<!--Turn over to devs and explain you only need to tweak index.html for now--will only tweak app.js and index.html in this class -->
 
-###Challenge
+### Challenge
 
+* Try printing out the product `3 * 4` with the notation described above.
 * Take the string `"hola!"` and call a method on it that uppercases all the letters.
 * Take the array `['s','w','e','e','t','n','e','s','s']` and call a method on it that joins all the letters together.
 
-<!--9:30 10 minutes -->
+<!--2:10 15 minutes -->
 
-##Controllers & Scope
+<!-- Review Model, View, Controller -->
+
+## Controllers & Scope
 
 Controllers contain all the business logic for our application.
 
@@ -154,8 +152,6 @@ To use our controller in our View we have to declare it somewhere. Create a new 
 In order to pass data or behavior to our HTML view we need to use the `$scope` object. `$scope` is Angular's interface to pass data and behavior to our views. Both the View and Controller share access to the `$scope` object.
 
 ![scope](http://devgirl.org/wp-content/uploads/2013/03/concepts-controller.png)
-
-<!-- How did we do this in Ruby on Rails? -->
 
 Let's register some Pokemon with `$scope`! In order to use the `$scope` object, we need to explicitly pass it to our controller. This is known as [**dependency injection**](https://docs.angularjs.org/guide/di).
 
@@ -205,17 +201,17 @@ Great, now let's see if we can see them in our view by referencing the `pokemon`
 
 That's cool, but it doesn't look very great. What if we could format our data so that the View knows to render it as JSON?
 
-###Challenge
+### Challenge
 
 * Use an Angular [filter](https://docs.angularjs.org/guide/filter) to render the data as JSON! Here is a [list](https://docs.angularjs.org/api/ng/filter) of options you can implement.
 
 * Pass a new variable `catchphrase` from the Controller to the View. Set its value as "gotta catch 'em all!" and use an angular filter to uppercase it in the View.
 
-<!--9:40 10 minutes -->
+<!--2:25 15 minutes -->
 
-##Directives
+## Directives
 
-In Angular, we **add behavior to HTML** through [directives](https://docs.angularjs.org/guide/directive). A directive is a marker on a HTML tag that tells Angular to run or reference Angular code. You've already used several!
+In Angular, we **add behavior to HTML** through [directives](https://docs.angularjs.org/guide/directive). A directive is a marker on an HTML tag that tells Angular to run or reference Angular code. We will go into this in more detail later, but you've already used several!
 
 Angular directives start with the prefix `ng-`
 
@@ -232,7 +228,7 @@ A few worth introducing:
 `ng-repeat` iterates over a collection.
 
 
-###ng-Model
+### ng-Model
 
 Our user wants to be able to *input* their name in a field so that the application acknowledges them as the trainer for these Pokemon.
 
@@ -242,7 +238,7 @@ Above our list of Pokemon, but still inside our `PokemonController` `div` tag, l
 
 ```html
   <div ng-controller="PokemonController">
-  
+  	...
     <span>Enter your name:</span>
     <input/>
     
@@ -261,29 +257,29 @@ Additionally if we want the value of the `trainer.name` variable to be printed o
 
 ```html
   <div ng-controller="PokemonController">
-  
+  	...
     <h1>Trainer: {{trainer.name}}</h1>
     
     <span>Enter your name:</span>
     <input ng-model="trainer.name"/>
-    
-    <pre>{{ pokemon | json }}</pre>
-    
+	...
   </div>
 ```
 
 
-###Challenge
+### Challenge
 
 * How could we create a default value for the trainer's name so that when the page loads it is set to `Ash`?
 
-<!--9:50 10 minutes -->
+<!--2:40 15 minutes -->
 
-##ng-repeat
+## ng-repeat
 
 `ngRepeat` is a very useful directive for iterating through a collection to render each item.
 
 For example if we wanted to render a list of todos we could set the directive `ng-repeat` to equal `"todo in todos"`.
+
+<!-- What is this like in plain JS? -->
 
 Let's say we want to print out an unordered list (`ul`) of many pokemon, where each of their names is printed out inside a list item (`li`). Given we've agreed to use `poke` as the singular form of `pokemon`, we could say something along the lines of:
 
@@ -293,28 +289,30 @@ Let's say we want to print out an unordered list (`ul`) of many pokemon, where e
 </ul>
 ```
 
-###Challenge
+### Challenge
 
 Render all the Pokemon into a bootstrap table, where each attribute is a column. The final result should look like this:
 
 ![pokemon-table](http://i.imgur.com/or1CwF7.png)
 
-Hint: `bower install --save bootstrap-css-only`, use a `table` with the classes `"table table-striped"`.  Don't forget to include Bootstrap in your HTML file either.
+>**Hint:** `bower install --save bootstrap-css-only`, use a `<table>` with the classes `"table table-striped"`.  Don't forget to `<link>` Bootstrap in your HTML file either.  If you are not sure of the `<table>` syntax, Google is your best friend.
 
-<!--10:00 5 minutes -->
-
-###etc
+### etc
 
 There are many more directives. For now, know that they exist and why they may be useful. Beyond that, reference the documentation. You can find a comprehensive list [here](https://docs.angularjs.org/api/ng/directive). By now, you should know that looking things up as needed is a better strategy than attempting to memorize everything by heart.
 
-###Challenge
+<!--2:55 Break to 3:10 -->
 
-* Sort the Pokemon by nDex number (hint: look at the built-in angular filters).
+<!--3:10 5 minutes -->
+
+### Challenge
+
+* Sort the Pokemon by nDex number (hint: look at the built-in angular filters, and include in your `ng-repeat`).
 * Create an input tag so that I can search for a particular Pokemon (hint: checkout the `filter` filter in combination with an `ng-model`).
 
-<!--10:05 5 minutes -->
+<!--3:15 10 minutes -->
 
-##Custom Filters
+## Custom Filters
 
 We've been notified that there is a new set of Pokemon in an alternate universe consisting of arch-nemeses. Pikachu's arch nemesis is Uhcakip, while Snorlax's is Xalrons (the reverse name).
 
@@ -337,13 +335,13 @@ app.filter('reverse', function() {
 
 *Note: filters require a function to be returned.*
 
-###Challenge
+### Challenge
 
 * Create a new column in your table called "Nemesis" and populate it with that pokemon's name reversed.
 
-<!-- 10:10 5 minutes -->
+<!-- 3:25 5 minutes -->
 
-##Pro-tip: Minification in Angular
+## Pro-tip: Minification in Angular
 
 Remember the main goal in [minification](https://en.wikipedia.org/wiki/Minification_(programming)) is to save space and deliver the file quickly. A variable `myVariableName` may be renamed to `a` during minification. A computer doesn't care what the name is as long as they are consistent.
 
@@ -369,10 +367,14 @@ Again, while our parameters will get minified, the strings will not. The names o
 
 ![happy pokemon](http://i.giphy.com/3oEduV4SOS9mmmIOkw.gif)
 
-<!--10:15 5 minutes -->
+<!--3:30 5 minutes -->
 
-##Our Style Guide
+## Our Style Guide
 
-There are many (too many) ways to do the same thing in Angular. As a result it is best for a working-group to define a style-guide amongst themselves in order to define some convention: [here's ours](https://github.com/den-wdi-1/angular-style-guide).
+There are many (too many) ways to do the same thing in Angular. As a result it is best for a working-group to define a style-guide amongst themselves in order to define some convention: [here's ours](https://github.com/den-wdi-2/angular-style-guide).
 
 Note: It is more important to have working code than to strictly follow the style-guide. Feel free to break the style-guide's convention if the the logic can be defended.
+
+<!--If you end early, introducing Project 3 would be a good idea -->
+
+<!--Introduce the weekend's HW -->
