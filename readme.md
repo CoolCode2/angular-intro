@@ -1,6 +1,6 @@
 ![](https://ga-dash.s3.amazonaws.com/production/assets/logo-9f88ae6c9c3871690e33280fcf557f33.png)
 
-<!--1:30 10 minutes -->
+<!--12:00 10 minutes -->
 
 <!--Hook: Raise your hand if you're ready to get back to the front end.  So today, we're going to dive back into the front end in a big way.  The goal is two-fold, we want to save you time by intoducing a framework that makes dynamic HTML much easier.  The second part of the goal is to introduce you to the concept that there are tons of these frameworks, and they can all make your lives easier. -->
 
@@ -48,7 +48,7 @@ Angular extends HTML with its declarative syntax to create dynamic, client-side 
 * "Not every app is a good fit for Angular. Angular was built with the CRUD application in mind."
 * "Angular is built around the belief that declarative code is better than imperative when it comes to building UIs and wiring software components together, while imperative code is excellent for expressing business logic."
 
-##Angular 2 Disclaimer
+## Angular 2 Disclaimer
 
 *Why are we not focusing on [Angular 2](https://github.com/angular/angular) but rather [Angular 1.x](https://github.com/angular/angular.js)?*
 
@@ -62,7 +62,7 @@ Angular extends HTML with its declarative syntax to create dynamic, client-side 
 
 >"Front-end development is a dumpster fire" -Adventures in Angular
 
-<!--1:45 15 minutes -->
+<!--12:10 15 minutes -->
 <!-- Half-mast then catchup -->
 
 ## Bower
@@ -103,7 +103,7 @@ Now update your `body` element to `<body ng-app="ngFun">`.
 
 Great, we're up and running!
 
-<!--2:00 10 minutes -->
+<!--1:30 10 minutes -->
 
 ## Templates & Expressions
 
@@ -119,7 +119,7 @@ Let's write a regular javascript expression inside double curly brackets, such a
 * Take the string `"hola!"` and call a method on it that uppercases all the letters.
 * Take the array `['s','w','e','e','t','n','e','s','s']` and call a method on it that joins all the letters together.
 
-<!--2:10 15 minutes -->
+<!--1:40 15 minutes -->
 
 <!-- Review Model, View, Controller -->
 
@@ -207,7 +207,7 @@ That's cool, but it doesn't look very great. What if we could format our data so
 
 * Pass a new variable `catchphrase` from the Controller to the View. Set its value as "gotta catch 'em all!" and use an angular filter to uppercase it in the View.
 
-<!--2:25 15 minutes -->
+<!--1:55 15 minutes -->
 
 ## Directives
 
@@ -271,7 +271,7 @@ Additionally if we want the value of the `trainer.name` variable to be printed o
 
 * How could we create a default value for the trainer's name so that when the page loads it is set to `Ash`?
 
-<!--2:40 15 minutes -->
+<!--2:10 15 minutes -->
 
 ## ng-repeat
 
@@ -301,16 +301,16 @@ Render all the Pokemon into a bootstrap table, where each attribute is a column.
 
 There are many more directives. For now, know that they exist and why they may be useful. Beyond that, reference the documentation. You can find a comprehensive list [here](https://docs.angularjs.org/api/ng/directive). By now, you should know that looking things up as needed is a better strategy than attempting to memorize everything by heart.
 
-<!--2:55 Break to 3:10 -->
+<!--2:25 Break to 2:35 -->
 
-<!--3:10 5 minutes -->
+<!--2:35 5 minutes -->
 
 ### Challenge
 
 * Sort the Pokemon by nDex number (hint: look at the built-in angular filters, and include in your `ng-repeat`).
 * Create an input tag so that I can search for a particular Pokemon (hint: checkout the `filter` filter in combination with an `ng-model`).
 
-<!--3:15 10 minutes -->
+<!--2:40 10 minutes -->
 
 ## Custom Filters
 
@@ -339,7 +339,7 @@ app.filter('reverse', function() {
 
 * Create a new column in your table called "Nemesis" and populate it with that pokemon's name reversed.
 
-<!-- 3:25 5 minutes -->
+<!-- 2:50 5 minutes -->
 
 ## Pro-tip: Minification in Angular
 
@@ -367,14 +367,12 @@ Again, while our parameters will get minified, the strings will not. The names o
 
 ![happy pokemon](http://i.giphy.com/3oEduV4SOS9mmmIOkw.gif)
 
-<!--3:30 5 minutes -->
+<!--2:55 5 minutes -->
 
 ## Our Style Guide
 
 There are many (too many) ways to do the same thing in Angular. As a result it is best for a working-group to define a style-guide amongst themselves in order to define some convention: [here's ours](https://github.com/den-wdi-2/angular-style-guide).
 
 Note: It is more important to have working code than to strictly follow the style-guide. Feel free to break the style-guide's convention if the the logic can be defended.
-
-<!--If you end early, introducing Project 3 would be a good idea -->
 
 <!--Introduce the weekend's HW -->
