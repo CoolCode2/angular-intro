@@ -52,9 +52,9 @@ Angular extends HTML with its declarative syntax to create dynamic, client-side 
 
 *Why are we not focusing on [Angular 2](https://github.com/angular/angular) but rather [Angular 1.x](https://github.com/angular/angular.js)?*
 
-* The features offered in Angular 2 are not radically different and community adoption is still in progress.
+* The **features** offered in Angular 2 are not radically different.
 * (As of the writing of this) Angular 1.x is well supported/active on Github.
-* [Angular 2 was just released](https://splintercode.github.io/is-angular-2-ready/)
+* [Angular 2 was just released](https://splintercode.github.io/is-angular-2-ready/) and community adoption is still in progress.
 * Angular 2 is best to use with [TypeScript](https://www.typescriptlang.org/), and we haven't taught TypeScript yet.
 * Overall, it is much more important to **appreciate the problems** that we are solving on the client-side rather than memorizing specific solutions.
 
@@ -233,12 +233,11 @@ A few worth introducing:
 
 `ng-repeat` iterates over a collection.
 
-
 ### ng-Model
 
 Our user wants to be able to *input* their name in a field so that the application acknowledges them as the trainer for these Pokemon.
 
-Above our list of Pokemon, but still inside our `PokemonController` `div` tag, let's create an input field for our trainers name.
+Above our list of Pokemon, but still inside our `PokemonController` `div` tag, let's create an input field for our trainer's name.
 
 **index.html**
 
@@ -383,4 +382,4 @@ There are many (too many) ways to do the same thing in Angular. As a result it i
 
 Note: It is more important to have working code than to strictly follow the style-guide. Feel free to break the style-guide's convention if the the logic can be defended.
 
-<!--Introduce the weekend's HW -->
+<!--Introduce the HW -->
